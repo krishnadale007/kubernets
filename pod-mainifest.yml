@@ -1,13 +1,14 @@
+---
 apiVersion: v1
 kind: Pod
 metadata:
-  name: myapp
-  namespace: nginx-ms-ns
+  name: my-webserver
   labels: 
     name: myapp
 spec:
   containers:
     image: nginx
     resources:
-      ports:80
+      ports:
       - containerPort: 80
+...
