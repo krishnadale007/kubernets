@@ -1,6 +1,13 @@
-kubernets apiVersion: v1
-kind: Pod
+apiVersion: v1
+kind: Service
 metadata:
-  name: myapp
-  labels:
-    name: myapp
+  name: my-webserver-service
+spec:
+  selector:
+    app: myapp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+      nodeport: 32057
+  type: nodeport    
