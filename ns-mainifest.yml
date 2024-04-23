@@ -1,6 +1,7 @@
 ---
-kubernets apiVersion: v1
+apiVersion: v1
 kind: Pod
 metadata:
+  name: my-webserver-pod
   namespace: my-webserver-ns
 ...
