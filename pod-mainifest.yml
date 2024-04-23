@@ -2,15 +2,12 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: myapp
-  labels:
+  namespace: nginx-ms-ns
+  labels: 
     name: myapp
 spec:
   containers:
-  - name: myapp
     image: nginx
     resources:
-      limits:
-        memory: "128Mi"
-        cpu: "500m"
-    ports:
+      ports:80
       - containerPort: 80
