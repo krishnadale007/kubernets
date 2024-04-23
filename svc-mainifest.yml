@@ -9,5 +9,5 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 8080
-      nodeport: 32057
-  type: nodeport    
+      nodePort: 32057
+  type: NodePort    
