@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: pod
+metadata: 
+  name: new-space
+  labels:
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: new-space
+      labels:
+        prod: myapp
+spec:
+  containers:
+    - name: new-space-containers 
+      image: http
+      ports:
+        - name: http-port
+          containers: 80
